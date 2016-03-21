@@ -4,7 +4,7 @@
 
 MYSELF=$(whoami)
 
-if [ $(id -Gn "$MYSELF" | grep -c "i2c") > "0" ]; then
+if [ ($(id -Gn "$MYSELF" | grep -c "i2c") > "0") ]; then
 	echo "$MYSELF, I came up with more than 0, you're in the i2c group and good to go."
 	exit
 else
